@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Заголовок</title>
+  <link rel="stylesheet" href="../CSS/style.css" />
+</head>
+
+<body>
+  <!-- Початок слайдера -->
+  <section style="margin-top: 80px" id="carousel-section">
+    <h2>Слайдер</h2>
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <img src="images/image1.jpg" alt="Image 1" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/image2.jpg" alt="Image 2" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/image3.jpg" alt="Image 3" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/image4.jpg" alt="Image 4" />
+      </div>
+      <div class="carousel-prev">&#10094;</div>
+      <div class="carousel-next">&#10095;</div>
+      <div class="carousel-dots">
+        <span class="carousel-dot"></span>
+        <span class="carousel-dot"></span>
+        <span class="carousel-dot"></span>
+        <span class="carousel-dot"></span>
+      </div>
+      <div class="carousel-position"></div>
+    </div>
+  </section>
+  <!-- Кінець слайдера -->
+
+  <!-- Початок аккардіону -->
+  <section id="accordion-section">
+    <h2>Аккардіон</h2>
+    <div class="accordion">
+      <div class="accordion-header">Title 1</div>
+      <div class="accordion-content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+          quos, obcaecati enim facere amet nisi alias ab explicabo. Quod fuga
+          repudiandae quia cum cumque neque odit perferendis labore autem
+          architecto.
+        </p>
+      </div>
+
+      <div class="accordion-header">Title 2</div>
+      <div class="accordion-content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Consequatur nesciunt quos optio vero quidem excepturi qui numquam
+          minima non placeat tempora beatae et similique, deserunt soluta
+          corporis? Eum sed quasi, earum nemo vel voluptates sequi
+          consectetur, dignissimos impedit, molestias reprehenderit!
+        </p>
+      </div>
+
+      <div class="accordion-header">Title 3</div>
+      <div class="accordion-content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
+          suscipit earum, quas, dolorum perferendis hic esse, sapiente
+          quisquam ex voluptatibus iure error praesentium placeat a architecto
+          ullam! In optio dicta nesciunt, dolorem ab consequuntur sed
+          assumenda fugit? Hic, dicta magni? Quod nesciunt minima expedita
+          obcaecati, ducimus quos delectus dolore rerum!
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Кінець аккардіону -->
+
+  <!-- Початок табів -->
+  <section id="tabs-section">
+    <h2>Таби</h2>
+    <div class="tabs">
+      <div class="tab">
+        <button class="tablinks">Tab 1 title</button>
+      </div>
+      <div class="tab">
+        <button class="tablinks">Tab 2 title</button>
+      </div>
+      <div class="tab">
+        <button class="tablinks">Tab 3 title</button>
+      </div>
+
+      <div class="tabcontent">
+        <h3>Tab 1 content</h3>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Consectetur, quaerat harum nam culpa adipisci consequuntur
+          laudantium architecto nesciunt similique aperiam labore quas
+          praesentium perferendis magnam dignissimos eos. Quod, consectetur
+          error!
+        </p>
+      </div>
+
+      <div class="tabcontent">
+        <h3>Tab 2 content</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+          quae reiciendis minima dignissimos perspiciatis molestias nobis!
+          Vero quo laudantium quia ipsum, eaque quas sed sunt repudiandae
+          suscipit nisi accusamus earum et vel reprehenderit eligendi
+          accusantium, delectus saepe! Dignissimos, velit unde.
+        </p>
+      </div>
+
+      <div class="tabcontent">
+        <h3>Tab 3</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa illo
+          sapiente ea tenetur necessitatibus adipisci architecto natus,
+          dignissimos suscipit nam nulla vitae quod enim, nostrum ad quo
+          deserunt mollitia voluptas eius repudiandae nihil expedita amet.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Кінець табів -->
+
+  <!-- Бокове меню початок -->
+  <nav>
+    <button id="menu-button">&#9776;</button>
+    <ul id="menu">
+      <li><a href="#carousel-section">Слайдер</a></li>
+      <li><a href="#accordion-section">Аккардіон</a></li>
+      <li><a href="#tabs-section">Таби</a></li>
+      <li><a href="#generate-section">Генератор числа</a></li>
+      <li><a href="#section-timer">Таймер зворотнього відрахунку</a></li>
+    </ul>
+  </nav>
+  <!-- Бокове меню кінець -->
+
+  <!-- Переключення теми початок -->
+  <label class="switch">
+    <input type="checkbox" id="theme-switcher" />
+    <span class="slider round"></span>
+  </label>
+  <!-- Переключення теми кінець -->
+
+  <!-- Генератор випадкового числа початок -->
+  <section id="generate-section">
+    <h2>Генератор випадкового числа</h2>
+    <div>
+      <label for="minValue">Мінімальне значення:</label>
+      <input type="number" id="minValue" min="0" />
+    </div>
+    <div>
+      <label for="maxValue">Максимальне значення:</label>
+      <input type="number" id="maxValue" min="0" />
+    </div>
+    <button id="generateBtn">Сгенерувати число</button>
+    <div id="result"></div>
+    <div class="post-wrapper"></div>
+  </section>
+  <!-- Генератор випадкового числа кінець -->
+
+  <!-- Таймер зворотнього відрахунку початок -->
+  <section id="section-timer">
+    <h2>Таймер зворотнього відрахунку</h2>
+    <label for="minutes">Введите количество минут:</label>
+    <input type="text" id="minutes" />
+    <button id="timer-start-btn">Розпочати</button>
+
+    <div id="timer"></div>
+  </section>
+  <!-- Таймер зворотнього відрахунку кінець -->
+
+  <script src="JS/main.js"></script>
+</body>
+
+</html>
