@@ -70,19 +70,19 @@ let accordionContent = document.querySelectorAll(".accordion-content");
 
 accordionHeader.forEach((header, index) => {
     header.addEventListener("click", () => {
-        header.classList.toggle("active");
-        accordionContent[index].classList.toggle("active");
-        // if (header.classList.contains("active")) {
-        //     header.classList.remove("active");
-        //     accordionContent[index].classList.remove("active");
-        // } else {
-        //     accordionHeader.forEach((item, i) => {
-        //         item.classList.remove("active");
-        //         accordionContent[i].classList.remove("active");
-        //     });
-        //     header.classList.add("active");
-        //     accordionContent[index].classList.add("active");
-        // }
+        // header.classList.toggle("active");
+        // accordionContent[index].classList.toggle("active");
+        if (header.classList.contains("active")) {
+            header.classList.remove("active");
+            accordionContent[index].classList.remove("active");
+        } else {
+            accordionHeader.forEach((item, i) => {
+                item.classList.remove("active");
+                accordionContent[i].classList.remove("active");
+            });
+            header.classList.add("active");
+            accordionContent[index].classList.add("active");
+        }
     });
 });
 /**************************tabs***********************/
