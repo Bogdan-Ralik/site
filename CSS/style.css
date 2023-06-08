@@ -1,0 +1,304 @@
+section {
+border: 2px dashed #000;
+padding: 20px;
+margin: 5px 0;
+}
+
+/* Початок слайдера */
+.carousel-container {
+width: 700px;
+height: 400px;
+border-radius: 25px;
+position: relative;
+overflow: hidden;
+margin: 0 auto;
+}
+
+.carousel-slide {
+display: inline-block;
+width: 100%;
+display: none;
+}
+
+.carousel-slide.active {
+display: inline-block;
+}
+
+.carousel-slide img {
+user-select: none;
+width: 100%;
+height: 400px;
+}
+
+.carousel-prev,
+.carousel-next {
+cursor: pointer;
+position: absolute;
+user-select: none;
+top: 50%;
+transform: translateY(-50%);
+padding: 16px;
+background-color: rgba(0, 0, 0, 0.4);
+color: #fff;
+border: none;
+outline: none;
+}
+
+.carousel-prev {
+left: 0;
+}
+
+.carousel-next {
+right: 0;
+}
+
+.carousel-dots {
+display: flex;
+justify-content: center;
+position: absolute;
+bottom: 20px;
+width: 100%;
+}
+
+.carousel-dot {
+width: 15px;
+height: 15px;
+border-radius: 50%;
+background-color: #000;
+margin-right: 10px;
+cursor: pointer;
+}
+
+.carousel-dot.active {
+background-color: yellow;
+}
+
+.carousel-position {
+position: absolute;
+bottom: 20px;
+right: 20px;
+background: white;
+width: 50px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 10px;
+border: 1px solid #000;
+}
+/* Кінець слайдера */
+
+/* Початок аккардіону */
+.accordion-header {
+background-color: #eee;
+padding: 10px;
+cursor: pointer;
+border: 1px dashed #000;
+}
+.accordion-header.active {
+background-color: #bdbdbd;
+}
+
+.accordion-content {
+display: none;
+padding: 10px;
+}
+.accordion-content.active {
+display: block;
+}
+/* Кінець аккардіону */
+
+/* Початок табів */
+.tab {
+display: inline-block;
+margin-right: 10px;
+}
+
+.tab button {
+background-color: #f2f2f2;
+border: none;
+outline: none;
+cursor: pointer;
+padding: 10px 15px;
+transition: 0.3s;
+font-size: 16px;
+}
+
+.tab button:hover {
+background-color: #ddd;
+}
+
+.tab button.active {
+background-color: #bdbdbd;
+}
+
+.tabcontent {
+display: none;
+padding: 15px;
+border: 1px solid #ccc;
+}
+
+.tabcontent.show {
+display: block;
+}
+/* Кінець табів */
+
+/* Бокове меню початок */
+nav {
+position: fixed;
+top: 0;
+left: 0;
+height: 100vh;
+width: 0;
+background-color: #333;
+overflow: hidden;
+transition: width 0.5s ease-in-out;
+}
+
+nav.active {
+width: 250px;
+}
+
+#menu-button {
+display: block;
+position: fixed;
+top: 20px;
+left: 20px;
+background-color: #333;
+color: #fff;
+border: none;
+padding: 10px;
+font-size: 1.2rem;
+cursor: pointer;
+z-index: 2;
+}
+
+#menu {
+margin: 0;
+padding: 100px 30px 20px;
+list-style: none;
+opacity: 0;
+transition: all 0.5s ease;
+position: relative;
+z-index: 1;
+}
+#menu.active {
+opacity: 1;
+transition: all 0.5s ease;
+}
+
+#menu li {
+margin-bottom: 20px;
+}
+
+#menu a {
+color: #fff;
+text-decoration: none;
+font-size: 1.2rem;
+}
+/* Бокове меню кінець */
+
+/* Переключення теми початок */
+body.dark-theme {
+background: #939393;
+}
+.switch {
+position: fixed;
+display: inline-block;
+top: 20px;
+right: 20px;
+width: 60px;
+height: 34px;
+}
+
+.switch input {
+display: none;
+}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+-webkit-transition: 0.4s;
+transition: 0.4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+-webkit-transition: 0.4s;
+transition: 0.4s;
+}
+
+input:checked + .slider {
+background-color: #2196f3;
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+}
+
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+/* Переключення теми кінець */
+
+/* Генератор випадкового числа початок */
+#generate-section label {
+display: inline-block;
+width: 200px;
+text-align: right;
+margin-right: 10px;
+}
+
+#generate-section input[type="number"] {
+width: 80px;
+}
+
+#generate-section button {
+display: block;
+margin: 10px auto;
+padding: 5px 10px;
+border-radius: 5px;
+background-color: #4caf50;
+color: #ffffff;
+border: none;
+font-size: 16px;
+cursor: pointer;
+}
+
+#generate-section button:hover {
+background-color: #3e8e41;
+}
+
+.post-wrapper {
+background: #878787;
+}
+/* Генератор випадкового числа кінець */
+
+/* Таймер зворотнього відрахунку початок */
+#timer {
+font-size: 24px;
+font-weight: bold;
+}
+
+/* Таймер зворотнього відрахунку кінець */
